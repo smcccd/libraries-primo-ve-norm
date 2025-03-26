@@ -16,24 +16,13 @@ rule "Primo VE Display - Subject 600"
         concatenate with delimiter (TEMP"1",TEMP"2"," -- ")
 		set TEMP"3" to multilingual by "600" "Subject" "display"
   		concatenate with delimiter (TEMP"1",TEMP"3","")
-  		
-		replace string by string (TEMP"1","McKinley, Mount","Denali, Mount")
-		replace string by string (TEMP"1","America, Gulf of","Mexico, Gulf of")
 
-        replace string by string (TEMP"1","Illegal alien","Undocumented immigrant")
-        replace string by string (TEMP"1","illegal alien","undocumented immigrant")
-        replace string by string (TEMP"1","Illegal immigrants","Undocumented immigrants")
+
+		replace string by string (TEMP"1","America, Gulf of","Mexico, Gulf of")
+		replace string by string (TEMP"1","McKinley, Mount","Denali, Mount")
 
 		replace string by string (TEMP"1","Illegal immigration","Unauthorized immigration")
 		replace string by string (TEMP"1","illegal immigration","unauthorized immigration")
- 
-        replace string by string (TEMP"1","Alien criminal","Noncitizen criminal")
-        replace string by string (TEMP"1","Alien detention centers","Immigrant detention centers")
-        replace string by string (TEMP"1","Alien labor","Foreign workers")
-        replace string by string (TEMP"1","Alien property","Foreign-owned property")
-        replace string by string (TEMP"1","with aliens","with noncitizens")
-		replace string by string (TEMP"1","of aliens","of noncitizens")
-        replace string by string (TEMP"1","Aliens","Noncitizens")
  
         create pnx."display"."subject" with TEMP"1"
 end
@@ -145,23 +134,11 @@ rule "Primo VE Display- Subject 650"
 		set TEMP"3" to multilingual by "650" "Subject" "display"
 		concatenate with delimiter (TEMP"1",TEMP"3","")
 
-		replace string by string (TEMP"1","McKinley, Mount","Denali, Mount")
 		replace string by string (TEMP"1","America, Gulf of","Mexico, Gulf of")
-
-		replace string by string (TEMP"1","Illegal alien","Undocumented immigrant")
-		replace string by string (TEMP"1","illegal alien","undocumented immigrant")
-		replace string by string (TEMP"1","Illegal immigrants","Undocumented immigrants")
+		replace string by string (TEMP"1","McKinley, Mount","Denali, Mount")
 
 		replace string by string (TEMP"1","Illegal immigration","Unauthorized immigration")
 		replace string by string (TEMP"1","illegal immigration","unauthorized immigration")
-
-		replace string by string (TEMP"1","Alien criminal","Noncitizen criminal")
-		replace string by string (TEMP"1","Alien detention centers","Immigrant detention centers")
-		replace string by string (TEMP"1","Alien labor","Foreign workers")
-		replace string by string (TEMP"1","Alien property","Foreign-owned property")
-		replace string by string (TEMP"1","with aliens","with noncitizens")
-		replace string by string (TEMP"1","of aliens","of noncitizens")
-		replace string by string (TEMP"1","Aliens","Noncitizens")
 
 		create pnx."display"."subject" with TEMP"1"
 end
@@ -185,6 +162,10 @@ end
 		set TEMP"3" to multilingual by "651" "Subject" "display"
 		concatenate with delimiter (TEMP"1",TEMP"3","")
 
+		replace string by string (TEMP"1","America, Gulf of","Mexico, Gulf of")
+		replace string by string (TEMP"1","McKinley, Mount","Denali, Mount")
+
+
 		create operational."prima_display"."subject" with TEMP"1"
 end
 		 
@@ -204,6 +185,11 @@ rule "Primo VE Display- Subject 653"
 		set TEMP"1" to MARC."653" subfields "a-u,w" delimited by " " remove substring using regex "\\.+$"
 		set TEMP"2" to multilingual by "653" "Subject" "display"
 		concatenate with delimiter (TEMP"1",TEMP"2","")
+
+		replace string by string (TEMP"1","America, Gulf of","Mexico, Gulf of")
+		replace string by string (TEMP"1","McKinley, Mount","Denali, Mount")
+		replace string by string (TEMP"1","Gulf of America","Gulf of Mexico")
+		replace string by string (TEMP"1","Mount McKinley","Mount Denali")
 
 		replace string by string (TEMP"1","Illegal alien","Undocumented immigrant")
 		replace string by string (TEMP"1","illegal alien","undocumented immigrant")
@@ -262,6 +248,9 @@ rule "Primo VE Display- Subject 655"
 		concatenate with delimiter (TEMP"1",TEMP"2"," -- ")
 		set TEMP"3" to multilingual by "655" "Subject" "display"
 		concatenate with delimiter (TEMP"1",TEMP"3","")
+
+		replace string by string (TEMP"1","America, Gulf of","Mexico, Gulf of")
+		replace string by string (TEMP"1","McKinley, Mount","Denali, Mount")
 
 		create pnx."display"."subject" with TEMP"1"
 end
@@ -465,6 +454,9 @@ rule "Primo VE Display- Subject 662"
 		set TEMP"1" to MARC."662" subfields "a-u,w" delimited by " " remove substring using regex "\\.+$"
 		set TEMP"2" to multilingual by "662" "Subject" "display"
 		concatenate with delimiter (TEMP"1",TEMP"2","")
+
+		replace string by string (TEMP"1","America, Gulf of","Mexico, Gulf of")
+		replace string by string (TEMP"1","McKinley, Mount","Denali, Mount")
 
 		create pnx."display"."subject" with TEMP"1"
 end
